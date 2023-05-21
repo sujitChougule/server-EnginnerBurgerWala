@@ -48,12 +48,10 @@ export const getAdminStats = asyncError(async (req, res, next) => {
   res.status(200).json({
     success: true,
     usersCount,
-    ordersCount: {
-      total: orders.length,
-      prepairing: prepairingOrders.length,
-      shipped: shippedOrders.length,
-      delivered: deliveredOrders.length,
-    },
+    ordersCount: orders.length,
+    prepairing: prepairingOrders.length,
+    shipped: shippedOrders.length,
+    delivered: deliveredOrders.length,
     totalIncome,
   });
 });
